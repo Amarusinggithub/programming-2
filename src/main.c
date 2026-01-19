@@ -1,26 +1,13 @@
 #include <stdio.h>
 
-int nums[3],largest;
+int nums [6] = {6,17,9,11,41,2};
+int largest;
 
 int main() {
 
-    printf("Enter a number:\n");
-    scanf("%d", &nums[0]);
-
-    printf("Enter another number:\n");
-    scanf("%d", &nums[1]);
-
-    printf("Enter another number:\n");
-    scanf("%d", nums[2]);
-
-largest=nums[0];
-
-for(int i=0; i< sizeof(nums);i++){
-    if(nums[i]>largest){
-        largest = nums[i];
+    for(int i=5; i>=0;i--){
+        printf("%d", nums[i]);
     }
-}
-
     return 0;
 }
 
