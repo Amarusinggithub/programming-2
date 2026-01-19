@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int nums[3],temp;
+int nums[3],largest;
 
 int main() {
 
@@ -13,9 +13,13 @@ int main() {
     printf("Enter another number:\n");
     scanf("%d", nums[2]);
 
-temp=nums[2];
-nums[2]=nums[0];
-nums[0]=temp;
+largest=nums[0];
+
+for(int i=0; i< sizeof(nums);i++){
+    if(nums[i]>largest){
+        largest = nums[i];
+    }
+}
 
     return 0;
 }
