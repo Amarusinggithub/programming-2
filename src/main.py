@@ -1,15 +1,12 @@
 
 
 
-num = int(input("Enter a number: "))
+num = int(input("Please enter your age: "))
 
-if num==0:
-    print("this number is 0")
-    
-elif num<0:
-    print("This is a negative number")
+if num>=18:
+    print("Access Granted")
 else:
-    print("this is a positive number")
+    print("Access Denied")
     
     
 
