@@ -1,16 +1,22 @@
 '''
 Author: Amar Campbell- 2501977
 Data: 27/01/2026
-Description: Worksheet 2 Question 1
+Description: Worksheet 2 Question 2
 '''
 
-sales_per_week=[]
-total_sales=0.00
+correct_password= "secure123"
+password=""
 
-for i  in range (7):
-    sales_per_week.append(float(input(f"Enter the sales number for day {i+1}: ")))
-    total_sales+=sales_per_week[i]
+while correct_password!=password:
+    password= input("Please enter your password:\n")
     
-    
+    if (password==correct_password):
+        print("Access Granted\n")
+    else:
+        print("Access Denied\n")
 
-print(f"This is your total sales for the week ${total_sales}\n")
+
+
+        
+        
+        
