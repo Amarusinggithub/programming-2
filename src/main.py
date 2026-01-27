@@ -1,17 +1,16 @@
-from ctypes import sizeof
+'''
+Author: Amar Campbell- 2501977
+Data: 27/01/2026
+Description: Worksheet 2 Question 1
+'''
 
+sales_per_week=[]
+total_sales=0.00
 
-arr=[]
-
-for i in range (3):
-    arr.append(int(input("Please enter a Number: \n")))
-
+for i  in range (7):
+    sales_per_week.append(float(input(f"Enter the sales number for day {i+1}: ")))
+    total_sales+=sales_per_week[i]
     
-largest= arr[0]
+    
 
-for i in range (3):
-    if arr[i] > largest:
-        largest= arr[i]
-        
-        
-print(f"This is the largest number {largest}")
+print(f"This is your total sales for the week ${total_sales}\n")
