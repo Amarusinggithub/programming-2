@@ -1,27 +1,32 @@
+/*
+
+*/
+
 #include <stdio.h>
 
-int nums [6];
-int largest;
 
-int main() {
+float salesPerDay[7];
 
-    for(int i=5; i>=0;i--){
-        printf("Enter a number:");
-        scanf("%d", &nums[i]);
-    }
+float totalSales=0;
 
-int largest=nums[0];
 
-for(int i; i<=5; i++){
-    if(nums[i]>largest){
-        largest= nums[i];
-    }
+int main (){
+for(int i=0;i<7; i++){
+    printf("Enter the sales number for day %d:", i+1);
+    scanf("%f", &salesPerDay[i]);
+    totalSales+=salesPerDay[i];
 }
 
-printf(" %d is the largest number", largest );
+printf("This is your total sales for the week $%.2f\n", totalSales);
+
 
     return 0;
 }
+
+
+
+
+
 
 
 
