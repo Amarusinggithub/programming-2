@@ -17,13 +17,18 @@ for(int i=0;i<7; i++){
     printf("Enter the sales number for day %d:", i+1);
     scanf("%f", &salesPerDay[i]);
     totalSales+=salesPerDay[i];
+
 }
 
-printf("This is your total sales for the week $%.2f\n", totalSales);
-
-
-    return 0;
+return 0;
 }
+
+
+
+
+
+
+
 
 
 
