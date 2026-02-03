@@ -4,34 +4,48 @@ Data: 03/02/2026
 */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-
-float average (float grades []);
+char* checkScore (float score);
 
 int main (){
-float grades [3];
+float score;
 
-for(int i =0; i<3; i++){
+
 printf("Enter your test score:\n");
-scanf("%f", &grades[i] );
+scanf("%f", &score );
+
+char* result= checkScore( score);
+
+if(result != NULL){
+
+printf("%s\n",result);
+free(result);
 }
 
-float mean=average(grades);
-
-printf("This is your average: %.2f\n", mean);
 
 return 0;
 }
 
-float average(float grades []){
-float average=0.00;
-float sum =0.00;
+char* checkScore (float score){
+char pass[]="pass";
+char fail[]="fail";
 
-for (int i=0; i<3; i++){
-    sum+=grades[i];
+char* message = malloc(strlen(pass));
+    if (message == NULL) {
+        // Handle allocation failure
+        return NULL;
+    }
+
+if(score < 50){
+    return strcpy(message,fail) ;
 }
-average= sum/3;
-return average;
+
+if(score >= 50){
+    return strcpy(message,pass) ;
+}
+return NULL;
 
 }
 
