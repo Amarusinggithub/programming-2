@@ -7,18 +7,22 @@ Description: Worksheet 2 Question 4
 #include <stdio.h>
 
 
-int multiplication(int  num1, int num2);
+void greetings (char name []);
 
 int main (){
 
-printf("%d\n",multiplication(10, 30));
+char name[20];
+printf("Enter a number:\n");
+
+scanf("%s", name);
+greetings(name);
 
 return 0;
 }
 
-int multiplication(int  num1, int num2){
+void greetings(char name []){
 
-return num1*num2;
+printf("hello %s\n", name);
 
 }
 
