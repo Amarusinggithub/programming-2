@@ -4,64 +4,37 @@ Data: 03/02/2026
 */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stdbool.h>
 
-char* checkScore (float score);
 
+
+int factorial (int num);
 int main (){
-float score;
+    int num;
+    char ans;
+while (true){
+    printf("Please enter a number:\n");
+    scanf("%d",&num );
+    int num2= factorial(num);
 
+    printf("This is the factorial: %d\n",num2);
 
-printf("Enter your test score:\n");
-scanf("%f", &score );
+    printf("\nDo you want to continue (Y/N)?\n");
+    scanf(" %c",&ans );
 
-char* result= checkScore( score);
+    if(ans=='n' || ans=='N'){
+        break;
+    }
 
-if(result != NULL){
-
-printf("%s\n",result);
-free(result);
 }
-
 
 return 0;
 }
 
-char* checkScore (float score){
-char pass[]="pass";
-char fail[]="fail";
-
-char* message = malloc(strlen(pass));
-    if (message == NULL) {
-        // Handle allocation failure
-        return NULL;
+int factorial(int num){
+    if (num==0){
+        return 1;
+    }else{
+        return num*factorial(num-1);
     }
-
-if(score < 50){
-    return strcpy(message,fail) ;
 }
-
-if(score >= 50){
-    return strcpy(message,pass) ;
-}
-return NULL;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
