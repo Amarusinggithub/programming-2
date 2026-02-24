@@ -8,8 +8,8 @@ Description: worksheet 5 question 2
 #include <stdlib.h>
 #include <time.h>
 
-void displaySmallest(int arr[10]);
-void displayLargest(int arr[10]);
+void displaySmallest(int arr[],int size);
+void displayLargest(int arr[],,int size);
 
 int main (){
 srand(time(0));
@@ -22,15 +22,15 @@ for(int i=0; i<10;i++){
 }
 
 
-displaySmallest(arr);
-displayLargest(arr);
+displaySmallest(arr,10);
+displayLargest(arr,10);
 
 return 0;
 }
 
-void displaySmallest(int arr[10]){
+void displaySmallest(int arr[],int size){
 int smallest=arr[0];
-for(int i=0; i<10;i++){
+for(int i=0; i<size;i++){
     if(arr[i]<smallest){
         smallest=arr[i];
     }
@@ -41,10 +41,10 @@ for(int i=0; i<10;i++){
 }
 
 
-void displayLargest(int arr[10]){
+void displayLargest(int arr[],,int size){
 int largest=arr[0];
 
-for(int i=0; i<10;i++){
+for(int i=0; i<size;i++){
 
 if(arr[i]>largest){
         largest=arr[i];
