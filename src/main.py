@@ -1,15 +1,22 @@
-arr=[[85, 92, 78, 90],
-    [76, 88, 95, 82],
-    [91, 74, 83, 87]]
+# This array stores the integer to be sum by row and column
+arr=[[1, 2, 3, 4, 5],
+    [2, 4, 6, 8, 10],
+    [20, 10, 5, 3, 1],
+    [3, 6, 9, 12, 15]]
 
-largest=arr[0][0]
-index=0
+for i in range(4):
+    total=0
+    for j in range(5):
+        total+= arr[i][j]
+    arr[i].append(total)
 
-for i in range(3):
-    for j in range(4):
-        if(arr[i][j]>largest):
-            largest=arr[i][j]
-            index=i
 
-print(f" This is the largest number: {largest}\n")
-print(f"This is the index of the student with the largest number: {index}")
+column_total=[]
+for j in range(5):
+    total=0
+    for i in range (4):
+        total=+arr[i][j]
+    column_total.append(total)
+    
+arr.append(column_total)
+print(arr)

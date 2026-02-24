@@ -5,32 +5,15 @@ Description: Practice test
 */
 
 #include <stdio.h>
-#include <stdbool.h>
-#include <stdlib.h>
-#include <time.h>
 
-void populate();
-int findTotal();
 
-int arr[5];
+int arr=[[1, 2, 3, 4, 5],
+    [2, 4, 6, 8, 10],
+    [20, 10, 5, 3, 1],
+    [3, 6, 9, 12, 15]]
 
 int main (){
-srand(time(0));
-populate();
-printf("This the sum of the array: %d", findTotal());
+
 return 0;
 }
 
-void populate(){
-    for ( int i=0; i<5;i++){
-        arr[i]= rand()%(21-11+1)+11;
-    }
-}
-
-int findTotal(){
-    int sum;
-    for(int i=0;i<5;i+=){
-        sum+=arr[i];
-    }
-    return sum;
-}
