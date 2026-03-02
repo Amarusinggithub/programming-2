@@ -11,38 +11,54 @@ Description: worksheet 5
 #define COLUMN 6
 
 
+void binarySearch(int num);
 
 
 int main (){
+srand(time(0));
 
-int arr[8] = {5, 12, 3, 8, 21, 7, 14, 2};
 
-for(int i=0;i<7;i++){
+int arr[5];
+
+for(int i=0;i<4;i++){
+    arr[i]=rand()%(20-1+1)+1;
     printf("%3d,",arr[i]);
 }
 
-for(int i=0;i<7;i++){
+/*for(int i=0; i<7;i++){
+   // int min_idx=i;
     for(int j=i+1;j<7;j++){
-    if(arr[i]>arr[j]){
-        int temp=arr[j];
-        arr[j]=arr[i];
-        arr[i]=temp;
-    }        
-    }
+    
+        if(arr[min_idx]>arr[j]){
+            min_idx=j;
+        }
+
+        if(arr[j]>arr[i]){
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+        }
+        
+    }*/
+
+    int temp=arr[0];
+    arr[0]=arr[4];
+    arr[4]=temp;
+
+printf("\n");
+printf("\n");
+
+for(int i=0;i<4;i++){
+    printf("%3d,",arr[i]);
 }
-    printf("\nSorted:\n");
 
-for(int i=0;i<7;i++){
-    printf("\n%3d,",arr[i]);
+    return 0;
 }
 
 
+void binarySearch(int num){
 
-
-return 0;
 }
-
-
 
 
 
